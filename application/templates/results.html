@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block content %}
+<H1>{{ year }} </H1>
+<hr>
+
+<H2>Popularity</h2>
+<TABLE class="pure-table">
+  <thead>
+    <th>N</th>
+    <th>Title</th>
+    <th>Popularity</th>
+  </thead>
+  <tbody>
+{% for row in popularity %}
+  <tr>
+    <td> {{row['n']}}</td>
+    <td> {{row['title']}} </td>
+    <td> {{row['popularity']}} </td>
+  </tr>
+{% endfor %}
+</tbody>
+</Table>
+
+<hr>
+<H2>Revenue</h2>
+<TABLE class="pure-table">
+  <thead>
+    <th>N</th>
+    <th>Title</th>
+    <th>revenue</th>
+    <th>% revenue</th>
+  </thead>
+  <tbody>
+{% for row in revenue %}
+  <tr>
+    <td> {{row['n']}}</td>
+    <td> {{row['title']}} </td>
+    <td> {{row['revenue']}} </td>
+    <td> {{row['percentRevenue']}} </td>
+  </tr>
+{% endfor %}
+</tbody>
+</Table>
+
+<hr>
+<H2>Genres</h2>
+<TABLE class="pure-table">
+  <thead>
+    <th>N</th>
+    <th>Genre</th>
+    <th>Num Movies</th>
+  </thead>
+  <tbody>
+{% for row in genre %}
+  <tr>
+    <td> {{row['n']}}</td>
+    <td> {{row['name']}} </td>
+    <td> {{row['num_movies']}} </td>
+  </tr>
+{% endfor %}
+</tbody>
+</Table>
+
+<hr>
+
+<H2>Revenue</h2>
+<TABLE class="pure-table">
+  <thead>
+    <th>N</th>
+    <th>Genre</th>
+    <th>Production Company</th>
+    <th>Num Movies</th>
+  </thead>
+  <tbody>
+{% for row in production_companies %}
+  <tr>
+    <td> {{row['n']}}</td>
+    <td> {{row['name']}} </td>
+    <td> {{row['production_company']}} </td>
+    <td> {{row['num_movies']}} </td>
+  </tr>
+{% endfor %}
+</tbody>
+</Table>
+
+<hr>
+{% endblock %}

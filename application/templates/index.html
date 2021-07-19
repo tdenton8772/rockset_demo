@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="/results" method="get" id="form1">
+<label for="year">Year:</label>
+<input type="text" id="year" name="year"><br><br>
+</form>
+<button type="submit" form="form1" value="Submit">Submit</button>
+
+{% endblock %}
