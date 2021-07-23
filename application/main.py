@@ -39,7 +39,7 @@ def genres(year):
     # retrieve Query Lambda
     qlambda = rs.QueryLambda.retrieve(
         'genres',
-        version='c83a14419222b1f7',
+        version='70431939bfe7ddf7',
         workspace='commons')
 
     params = ParamDict()
